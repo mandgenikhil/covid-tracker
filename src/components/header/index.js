@@ -10,7 +10,7 @@ export default class Header extends Component {
         this.state = {
             home: "warning",
             results: "white",
-            about: "white",
+            stats: "white",
             contact: "white",
 
         }
@@ -21,7 +21,7 @@ export default class Header extends Component {
             this.setState({
                 home: "warning",
                 results: "white",
-                about: "white",
+                stats: "white",
                 contact: "white",
             })
         }
@@ -29,16 +29,16 @@ export default class Header extends Component {
             this.setState({
                 home: "white",
                 results: "warning",
-                about: "white",
+                stats: "white",
                 contact: "white",
             })
 
         }
-        else if (id === "about") {
+        else if (id === "stats") {
             this.setState({
                 home: "white",
                 results: "white",
-                about: "warning",
+                stats: "warning",
                 contact: "white",
 
             })
@@ -48,7 +48,7 @@ export default class Header extends Component {
             this.setState({
                 home: "white",
                 results: "white",
-                about: "white",
+                stats: "white",
                 contact: "warning",
 
             })
@@ -83,7 +83,7 @@ export default class Header extends Component {
                         <a href='#results' className={'has-text-' + this.state.results} onClick={() => this.onClickFunction("results", false)}>Results</a>
                     </div>
                     <div className="navbar-item">
-                        <a href='#about' className={'has-text-' + this.state.about} onClick={() => this.onClickFunction("about", false)}>About</a>
+                        <a href='#stats' className={'has-text-' + this.state.stats} onClick={() => this.onClickFunction("stats", false)}>Stats</a>
                     </div>
                     <div className="navbar-item">
                         <a href className={'has-text-' + this.state.contact} onClick={() => this.onClickFunction("contact", false)}>Contact Us</a>

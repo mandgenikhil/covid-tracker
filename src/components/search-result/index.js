@@ -12,11 +12,7 @@ export default class SearchResult extends Component {
                 <td>{this.props.data.active}</td>
                 <td>{this.props.data.positive}</td>
                 <td>{this.props.data.cured}</td>
-                <td>{this.props.data.death}</td>
-                <td>{this.props.data.new_active}</td>
-                <td>{this.props.data.new_positive}</td>
-                <td>{this.props.data.new_cured}</td>
-                <td>{this.props.data.new_death}</td>
+                <td>{this.props.data.death}</td>                
             </tr>
 
 

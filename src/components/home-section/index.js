@@ -84,7 +84,7 @@ export default class HomeSection extends Component {
                                     Stats Overview
                                       </p>
                                 <p className='title'>
-                                    Globle
+                                    India
                                       </p>
                             </div>
 
@@ -96,7 +96,7 @@ export default class HomeSection extends Component {
                                 Total Cases
                                       </p>
                                 <p className='title '>
-                                1,345,347
+                                {this.props.overallstats !== null ? this.props.overallstats.totalcases : null }
                                       </p>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ export default class HomeSection extends Component {
                                     Total Recovered
                                       </p>
                                 <p className='title  '>
-                                    259,544
+                                {this.props.overallstats !== null ?  this.props.overallstats.totalrecovered:null}
                                       </p>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ export default class HomeSection extends Component {
                                 Total Deaths
                                       </p>
                                 <p className='title'>
-                                    68,184
+                                {this.props.overallstats !== null ? this.props.overallstats.totaldeaths : null}
                                       </p>
                             </div>
                         </div>
