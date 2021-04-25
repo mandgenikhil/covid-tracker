@@ -1,0 +1,11 @@
+.hero_bg
+{
+    background-image: url('../../assets/images/virus.jpg') ;
+    background-repeat: no-repeat;
+}
+
+.stats_bg
+{
+    background-color: rgb(212, 216, 235);    
+    border-radius: 1em;    
+}
