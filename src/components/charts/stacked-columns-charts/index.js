@@ -5,7 +5,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import './index.css'
 
 export default class StackedColumnChart extends Component {
-    componentDidMount() {
+    componentDidUpdate() {
         /* Chart code */
         // Themes begin
         am4core.useTheme(am4themes_animated);
@@ -14,7 +14,7 @@ export default class StackedColumnChart extends Component {
         let chart = am4core.create("chartdiv", am4charts.XYChart);
         chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-        chart.data = this.props.chartdata;
+        chart.data = this.props.chartdata !== null ? this.props.chartdata : [] ;
         chart.colors.step = 2;
         chart.padding(30, 30, 10, 30);
         chart.legend = new am4charts.Legend();

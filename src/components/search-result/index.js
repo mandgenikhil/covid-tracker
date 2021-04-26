@@ -6,7 +6,7 @@ export default class SearchResult extends Component {
     render() {
         return (
 
-            <tr>
+            <tr className='is-size-7'>
                 <td>{this.props.data.sno}</td>
                 <td>{this.props.data.state_name}</td>
                 <td>{this.props.data.active}</td>

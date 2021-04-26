@@ -12,7 +12,7 @@ export function getChartData(dataList) {
         });
 
     });
-    return chartdata
+    return chartdata.sort((a, b) => (Number(a.positive) < Number(b.positive)) ? 1 : ((Number(b.positive) < Number(a.positive)) ? -1 : 0)).slice(1,7);
 }
 
 

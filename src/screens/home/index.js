@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import API_URLS from '../../config/api-urls/apis'
-import { getOverallStats ,getChartData} from '../../utils/utils-functions'
+import { getOverallStats, getChartData } from '../../utils/utils-functions'
 import ResultTable from '../../components/search-result/result-table'
 import AboutUs from '../../components/about-us'
 import StackedColumnChart from '../../components/charts/stacked-columns-charts'
-
+import Info from '../../components/info'
 // import Loader from 'react-loader'
 
 import HomeSection from '../../components/home-section'
@@ -18,7 +18,7 @@ export default class Home extends Component {
         this.state = {
             data: null,
             overallstats: null,
-            chartdata:null
+            chartdata: null
         }
     }
 
@@ -40,52 +40,12 @@ export default class Home extends Component {
         return (
             <>
                 <Header />
-                <HomeSection overallstats={this.state.overallstats}/>    
-                {this.state.data !== null ?
-
-                    <ResultTable id = 'results'data={this.state.data} />
-
-                    : null}
-                <StackedColumnChart chartdata={this.state.chartdata}/>
+                <HomeSection overallstats={this.state.overallstats} />
+                {this.state.data !== null ? <ResultTable id='results' data={this.state.data} /> : null}
+                <StackedColumnChart chartdata={this.state.chartdata} />
                 <AboutUs />
+                <Info />
                 <Footer />
-                {/* <div className='box'>
-                    <div className='columns'>
-
-                        <div className='column has-text-centered'>
-                            Total Cases
-                                <div>
-                                {this.state.overallstats != null ? this.state.overallstats.totalcases : null}
-                            </div>
-                        </div>
-                        <div className='column has-text-centered'>
-                            Total Recovered
-                                <div>
-                                {this.state.overallstats != null ? this.state.overallstats.totalrecovered : null}
-                            </div>
-                        </div>
-                        <div className='column has-text-centered'>
-                            Total Deaths
-                                <div>
-                                {this.state.overallstats != null ? this.state.overallstats.totaldeaths : null}
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div> */}
-
-                {/* <Loader loaded={true} width={100} length={50}/> */}
-                {/* <progress className='progress'  max={100}>
-                80%
-                    </progress> */}
-
-                {/* {this.state.data !== null ?
-
-                    <ResultTable data={this.state.data} />
-
-                    : null}
-                */}
             </>
         )
     }

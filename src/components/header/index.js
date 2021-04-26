@@ -11,7 +11,7 @@ export default class Header extends Component {
             home: "warning",
             results: "white",
             stats: "white",
-            contact: "white",
+            info: "white",
 
         }
     }
@@ -22,7 +22,7 @@ export default class Header extends Component {
                 home: "warning",
                 results: "white",
                 stats: "white",
-                contact: "white",
+                info: "white",
             })
         }
         else if (id === "results") {
@@ -30,7 +30,7 @@ export default class Header extends Component {
                 home: "white",
                 results: "warning",
                 stats: "white",
-                contact: "white",
+                info: "white",
             })
 
         }
@@ -39,17 +39,17 @@ export default class Header extends Component {
                 home: "white",
                 results: "white",
                 stats: "warning",
-                contact: "white",
+                info: "white",
 
             })
 
         }
-        else if (id === "contact") {
+        else if (id === "info") {
             this.setState({
                 home: "white",
                 results: "white",
                 stats: "white",
-                contact: "warning",
+                info: "warning",
 
             })
 
@@ -86,7 +86,7 @@ export default class Header extends Component {
                         <a href='#stats' className={'has-text-' + this.state.stats} onClick={() => this.onClickFunction("stats", false)}>Stats</a>
                     </div>
                     <div className="navbar-item">
-                        <a href className={'has-text-' + this.state.contact} onClick={() => this.onClickFunction("contact", false)}>Contact Us</a>
+                        <a href='#info' className={'has-text-' + this.state.info} onClick={() => this.onClickFunction("info", false)}>Info</a>
                     </div>
 
                 </div>
